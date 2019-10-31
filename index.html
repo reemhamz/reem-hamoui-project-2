@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="/styles/setup.css">
     <link rel="stylesheet" href="styles/styles.css">
@@ -12,25 +13,28 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#"></a>Home</li>
-                <li><a href="#"></a>About</li>
-                <li><a href="#"></a>Blog</li>
-                <li><a href="#"></a>Contact</li>
-            </ul>
-        </nav>
+    <header class='header'>
+        <div class='wrapper'>
 
-        <h1>
-            The <span>Restaurant</span> Mall
-        </h1>
 
+            <nav>
+                <ul>
+                    <li><a href="#"></a>Home</li>
+                    <li><a href="#"></a>About</li>
+                    <li><a href="#"></a>Blog</li>
+                    <li><a href="#"></a>Contact</li>
+                </ul>
+            </nav>
+
+            <h1>
+                The <span>Restaurant</span> Mall
+            </h1>
+        </div>
     </header>
 
     <main>
 
-        <section class="info">
+        <section class="info wrapper">
 
             <div class="location">
                 <i class="fas fa-map-marker-alt"></i>
@@ -75,7 +79,7 @@
 
         </section>
 
-        <section class="food">
+        <section class="food wrapper">
 
             <article class="burger">
                 <div class="burger-img">
@@ -101,7 +105,8 @@
 
             <article class="new-food">
                 <div class="new-food-img">
-                    <img src="images/right-image.jpg" alt="A creative plate with food covered in green sauce topped with nuts, tomatoes, and flower petals">
+                    <img src="images/right-image.jpg"
+                        alt="A creative plate with food covered in green sauce topped with nuts, tomatoes, and flower petals">
                 </div>
                 <div class="new-food-content">
                     <!--New Food article starts-->
@@ -123,10 +128,57 @@
 
         </section>
 
+        <section class="win wrapper">
 
+            <article>
+                <h3>
+                    Win a $100 Gift Card
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi distinctio quaerat impedit natus
+                    illum similique ipsum sit? Hic, esse. Sint architecto vel blanditiis facere adipisci?
+                </p>
 
+                <button type='button' class='button black-button'>
+                    Find out More
+                </button>
+            </article>
 
+        </section>
 
+        <img src="images/banner.jpg" alt="Restaurant interior with wooden floors, tables, and black counters.">
+
+        <section class='nature wrapper'>
+            <article>
+                <div class="nature-img">
+                    <img src="images/square-image.jpg"
+                        alt="People dining in a restaurant with class ceiling and plants in hanging pots.">
+                </div>
+                <div class="nature-content">
+                    <h3>
+                        Bringing Nature in Spaces
+                    </h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis consequuntur nulla doloremque
+                        modi similique error tenetur dolorum omnis voluptatibus! Architecto quaerat, ipsam mollitia odio
+                        commodi atque, ex laudantium assumenda inventore corrupti doloribus earum illo asperiores
+                        corporis suscipit amet. Quasi inventore facere sit quo, consequatur odio ad tempore et earum
+                        omnis.
+                    </p>
+                    <button type='button' class='button black-button'>
+                        Find out More
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <section class="gallery wrapper">
+            <img src="images/gallery-image-1.jpg"
+                alt="Dim lightbulbs and plants hanging from a horizontal pipe structure.">
+            <img src="images/gallery-image-2.jpg" alt="A red neon sign with the words 'Take Away'.">
+            <img src="images/gallery-image-3.jpg"
+                alt="Several plates of asian-inspired cuisine appetizers sitting on a wooden table.">
+        </section>
 
     </main>
 
