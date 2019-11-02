@@ -20,16 +20,9 @@ img {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
-  border: 1px solid pink;
+  // border: 1px solid pink;
 }
 
-nav {
-  ul {
-    li {
-      list-style: none;
-    }
-  }
-}
 
 /* Header Styling */
 header {
@@ -143,7 +136,7 @@ header ul {
 }
 
 .burger-img img {
-  box-shadow: 20px 20px 0 $yellow;
+  box-shadow: 15px 15px 0 $yellow;
   position: absolute;
   top: -50px;
   left: 0;
@@ -169,7 +162,7 @@ header ul {
 }
 
 .new-food-img img {
-  box-shadow: -20px 20px 0 $yellow;
+  box-shadow: -15px 15px 0 $yellow;
 }
 //   position: absolute;
 //   right: 0;
@@ -221,17 +214,13 @@ header ul {
     }
     .nature-content {
       width: 70%;
-      // padding-left: 30px;
-      // margin: 0;
-    }
   }
 
   h3 {
     color: $yellow;
     line-height: 0;
-    // margin: 0;
   }
-}
+}}
 
 // Gallery styling
 
@@ -256,4 +245,13 @@ header ul {
       }
     }
   }
+}
+
+// Footer styling
+footer{
+  color: $white;
+  background-color: $black;
+  padding: 1px;
+  text-align: center;
+
 }
