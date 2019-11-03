@@ -167,7 +167,6 @@ header ul {
     text-align: right;
   }
   .new-food-img {
-    
     position: relative;
     right: -61px;
     bottom: -30px;
@@ -202,13 +201,12 @@ header ul {
   }
 }
 
-.mid-banner{
- background-image: url(../images/banner.jpg);
+.mid-banner {
+  background-image: url(../images/banner.jpg);
   background-size: cover;
   background-position: center;
   height: 50vh;
 }
-
 
 .nature {
   background-color: $pine;
@@ -333,17 +331,33 @@ footer {
   position: relative;
   bottom: 200px;
   margin: 0 auto;
+
   fieldset {
     text-align: center;
     padding: 30px;
-    // margin: 30px;
+    border-style: none;
+    display: flex;
+
+    .fieldset-wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+
+      input {
+        display: flex;
+        width: calc(90% / 2);
+      }
+    }
+
     input,
     textarea {
       background-color: $almostBlack;
       color: $white;
 
       &::placeholder {
-        color:$white;
+        color: $white;
         margin: 50px;
       }
     }
@@ -351,19 +365,54 @@ footer {
 }
 
 #contact input {
+  margin: 0 auto;
   margin-bottom: 30px;
-  width: calc((95% / 2) - 15px);
-  margin-right: 15px;
   border-style: none;
   border-bottom: 1px solid $yellow;
 }
 
 #contact textarea {
   width: 95%;
+  margin: 0 auto;
   border: 1px solid $yellow;
 }
 
 #contact button {
   width: 95%;
   margin: 40px auto;
+}
+
+
+// Blog Styling
+
+#blog header {
+  background-image: url(../images/blog-header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: $white;
+  position: relative;
+
+  h1 {
+    padding-top: 50px;
+  }
+}
+
+#blog main{
+  background-color: $pine;
+  display: flex;
+}
+.employment{
+// display: flex;
+flex-direction: column;
+justify-content: flex-end;
+width: 60%;
+  .employment-content{
+    h2{
+      color: $yellow;
+    }
+    p{
+      color: $white;
+    }
+  }
 }
