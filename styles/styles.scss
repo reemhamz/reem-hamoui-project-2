@@ -14,7 +14,6 @@ img {
   max-width: 100%;
 }
 
-
 /* Font and Default Stylings */
 .wrapper {
   max-width: 1240px;
@@ -23,6 +22,7 @@ img {
   // border: 1px solid pink;
 }
 
+// Home Page styliing
 
 /* Header Styling */
 header {
@@ -120,54 +120,64 @@ header ul {
   color: $white;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 300px;
+  // padding-bottom: 300px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+// Burger section
 .burger {
+  display: flex;
+  width: 100%;
+
   .wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     .burger-content {
-      // display: flex;
-      width: 50%;
-      align-content: flex-end;
+      width: 60%;
+      padding-left: 80px;
+    }
+    .burger-img {
+      position: relative;
+      top: -80px;
+      left: -80px;
+
+      img {
+        box-shadow: 15px 15px 0 $yellow;
+        display: block;
+      }
     }
   }
 }
 
-.burger-img img {
-  box-shadow: 15px 15px 0 $yellow;
-  position: absolute;
-  top: -50px;
-  left: 0;
-  visibility: hidden;
-}
-
+// New Food section
 .new-food {
-  padding-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-items: flex-end;
+  width: 100%;
 
+  .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
   .new-food-content {
-    // display: flex;
-    width: 50%;
+    width: 60%;
+    padding-right: 80px;
+    text-align: right;
   }
   .new-food-img {
-    display: flex;
-    align-self: flex-end;
-    width: 50%;
+    
+    position: relative;
+    right: -61px;
+    bottom: -30px;
+
+    img {
+      box-shadow: -15px 15px 0 $yellow;
+      display: block;
+    }
   }
 }
-
-.new-food-img img {
-  box-shadow: -15px 15px 0 $yellow;
-}
-//   position: absolute;
-//   right: 0;
-//   bottom: -50px;
-//
 
 // Winning styling
 
@@ -191,6 +201,15 @@ header ul {
     display: block;
   }
 }
+
+.mid-banner{
+ background-image: url(../images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+}
+
+
 .nature {
   background-color: $pine;
   margin: 0 auto;
@@ -214,13 +233,14 @@ header ul {
     }
     .nature-content {
       width: 70%;
-  }
+    }
 
-  h3 {
-    color: $yellow;
-    line-height: 0;
+    h3 {
+      color: $yellow;
+      line-height: 0;
+    }
   }
-}}
+}
 
 // Gallery styling
 
@@ -234,12 +254,11 @@ header ul {
     justify-content: center;
     flex-wrap: nowrap;
 
-    ul{
+    ul {
       display: flex;
-      
-      padding: 0;
-      li{
 
+      padding: 0;
+      li {
         width: calc((100% / 3) - 15);
         margin: 0 15px;
       }
@@ -248,10 +267,103 @@ header ul {
 }
 
 // Footer styling
-footer{
+footer {
   color: $white;
   background-color: $black;
   padding: 1px;
   text-align: center;
+}
 
+// Contact Page Styling
+
+// Header styling
+#contact header {
+  background-image: url(../images/contact-header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: $white;
+  position: relative;
+
+  h1 {
+    padding-top: 50px;
+  }
+}
+
+.contact-main {
+  background-color: $pine;
+  padding-top: 80px;
+  position: relative;
+  display: flex;
+  .wrapper {
+    display: flex;
+    // justify-content: space-between;
+  }
+
+  .contact-info {
+    color: $white;
+    width: 35%;
+    margin-right: 60px;
+    text-align: left;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+    .contact-info-top {
+      i {
+        color: $yellow;
+        padding: 20px 10px 0 0;
+      }
+    }
+    .contact-info-bottom {
+      padding-top: 5px;
+      p {
+        line-height: 0.5;
+      }
+    }
+  }
+  .contact-form {
+    width: 90%;
+  }
+}
+
+.contact-form {
+  background-color: $almostBlack;
+  box-shadow: 15px 15px 0 $yellow;
+  position: relative;
+  bottom: 200px;
+  margin: 0 auto;
+  fieldset {
+    text-align: center;
+    padding: 30px;
+    // margin: 30px;
+    input,
+    textarea {
+      background-color: $almostBlack;
+      color: $white;
+
+      &::placeholder {
+        color:$white;
+        margin: 50px;
+      }
+    }
+  }
+}
+
+#contact input {
+  margin-bottom: 30px;
+  width: calc((95% / 2) - 15px);
+  margin-right: 15px;
+  border-style: none;
+  border-bottom: 1px solid $yellow;
+}
+
+#contact textarea {
+  width: 95%;
+  border: 1px solid $yellow;
+}
+
+#contact button {
+  width: 95%;
+  margin: 40px auto;
 }
