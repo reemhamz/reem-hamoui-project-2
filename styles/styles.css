@@ -781,7 +781,7 @@ footer {
 }
 
 .blog-wrapper .employment .employment-content {
-  padding: 50px 0;
+  padding-bottom: 50px;
   margin: 0 60px;
 }
 
@@ -794,7 +794,7 @@ footer {
 }
 
 .blog-wrapper .employment .employment-content .date {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .blog-wrapper .employment .employment-img {
@@ -848,5 +848,25 @@ footer {
   left: 0;
   z-index: 1;
   width: 90%;
+}
+
+.comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 55%;
+}
+
+.comments h3, .comments p {
+  color: #FFFFFF;
+}
+
+.comments .comment-date {
+  color: #FFD300;
+  font-weight: 600;
 }
 /*# sourceMappingURL=styles.css.map */

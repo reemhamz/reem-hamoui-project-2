@@ -412,7 +412,7 @@ footer {
     flex-direction: column;
     width: 60%;
     .employment-content {
-      padding: 50px 0;
+      padding-bottom: 50px;
       margin: 0 60px;
       h2 {
         color: $yellow;
@@ -421,7 +421,7 @@ footer {
         color: $white;
       }
       .date {
-        font-weight: 800;
+        font-weight: 600;
       }
     }
     .employment-img {
@@ -472,4 +472,19 @@ footer {
   left: 0;
   z-index: 1;
   width: 90%;
+}
+
+
+.comments{
+  display: flex;
+  flex-direction: column;
+  
+  width: 55%;
+  h3, p{
+    color: $white;
+  }
+    .comment-date{
+    color: $yellow;
+    font-weight: 600;
+  }
 }
