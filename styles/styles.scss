@@ -19,7 +19,7 @@ img {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
-  border: 1px solid pink;
+  // border: 1px solid pink;
 }
 
 // Home Page styliing
@@ -390,7 +390,6 @@ footer {
   background-position: center;
   height: 80vh;
   color: $white;
-  // position: relative;
 
   h1 {
     padding-top: 50px;
@@ -401,68 +400,76 @@ footer {
   background-color: $pine;
 }
 
-
-  .blog-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    .employment {
-      border: 2px solid $yellow;
-      border-right: none;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 60%;
-      .employment-content {
-        padding: 50px 0;
-        margin: 0 60px;
-        h2 {
-          color: $yellow;
-        }
-        p {
-          color: $white;
-        }
-        .date{
-          font-weight: 800;
-        }
-      }
-      .employment-img {
-        position: relative;
-        top: -150px;
-
-        img {
-          box-shadow: -15px 15px 0 $yellow;
-          display: block;
-        }
-      }
-    }
-  }
-
-  .side-post{
+.blog-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  .employment {
+    border: 2px solid $yellow;
+    border-right: none;
     position: relative;
-    top: 100px; 
-    width: 30%;
-
-    .side-content{
-      background-color: $almostBlack;
-      padding-top: 500px;
-      // margin: 0 50px;
-      z-index: 2;
-      h4{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    .employment-content {
+      padding: 50px 0;
+      margin: 0 60px;
+      h2 {
         color: $yellow;
       }
-      p{
+      p {
         color: $white;
-        ul li {
-          color: $white;
-        }
+      }
+      .date {
+        font-weight: 800;
       }
     }
-    .side-img{
-      position: absolute;
-      visibility: hidden;
+    .employment-img {
+      position: relative;
+      top: -150px;
+
+      img {
+        box-shadow: -15px 15px 0 $yellow;
+        display: block;
+      }
     }
   }
+}
 
-  
+.side-post {
+  position: relative;
+  top: 100px;
+  width: 35%;
 
+  .side-content {
+    background-color: $almostBlack;
+    position: relative;
+    left: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 370px 30px 30px 30px;
+    
+    h4 {
+      color: $yellow;
+      margin: 0;
+      line-height: 20px; 
+    }
+    p {
+      color: $white;
+    }
+    ul {
+      color: $white;
+      list-style-type: disc;
+      li{
+        line-height: 1.5;
+      }
+    }
+  }
+}
+.side-img {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  z-index: 1;
+  width: 90%;
+}

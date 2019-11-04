@@ -228,7 +228,12 @@ nav {
   font-weight: 600;
 }
 
-p, input, label, textarea, a {
+p,
+input,
+label,
+textarea,
+a,
+li {
   font-family: "Barlow", sans-serif;
   font-size: 2rem;
   line-height: 28px;
@@ -289,7 +294,6 @@ img {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
-  border: 1px solid pink;
 }
 
 /* Header Styling */
@@ -807,29 +811,42 @@ footer {
 .side-post {
   position: relative;
   top: 100px;
-  width: 30%;
+  width: 35%;
 }
 
 .side-post .side-content {
   background-color: #171B0E;
-  padding-top: 500px;
-  z-index: 2;
+  position: relative;
+  left: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding: 370px 30px 30px 30px;
 }
 
 .side-post .side-content h4 {
   color: #FFD300;
+  margin: 0;
+  line-height: 20px;
 }
 
 .side-post .side-content p {
   color: #FFFFFF;
 }
 
-.side-post .side-content p ul li {
+.side-post .side-content ul {
   color: #FFFFFF;
+  list-style-type: disc;
 }
 
-.side-post .side-img {
+.side-post .side-content ul li {
+  line-height: 1.5;
+}
+
+.side-img {
   position: absolute;
-  visibility: hidden;
+  top: -30px;
+  left: 0;
+  z-index: 1;
+  width: 90%;
 }
 /*# sourceMappingURL=styles.css.map */
