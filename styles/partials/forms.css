@@ -1,0 +1,90 @@
+.contact-form {
+  background-color: #171B0E;
+  -webkit-box-shadow: 15px 15px 0 #FFD300;
+          box-shadow: 15px 15px 0 #FFD300;
+  position: relative;
+  bottom: 200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.contact-form fieldset {
+  text-align: center;
+  padding: 30px;
+  border-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-form fieldset .fieldset-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-form fieldset .fieldset-wrapper input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(90% / 2);
+}
+
+.contact-form fieldset input,
+.contact-form fieldset textarea {
+  background-color: #171B0E;
+  color: #FFFFFF;
+}
+
+.contact-form fieldset input::-webkit-input-placeholder,
+.contact-form fieldset textarea::-webkit-input-placeholder {
+  color: #FFFFFF;
+  margin: 50px;
+}
+
+.contact-form fieldset input:-ms-input-placeholder,
+.contact-form fieldset textarea:-ms-input-placeholder {
+  color: #FFFFFF;
+  margin: 50px;
+}
+
+.contact-form fieldset input::-ms-input-placeholder,
+.contact-form fieldset textarea::-ms-input-placeholder {
+  color: #FFFFFF;
+  margin: 50px;
+}
+
+.contact-form fieldset input::placeholder,
+.contact-form fieldset textarea::placeholder {
+  color: #FFFFFF;
+  margin: 50px;
+}
+
+#contact input {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-style: none;
+  border-bottom: 1px solid #FFD300;
+}
+
+#contact textarea {
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid #FFD300;
+}
+
+#contact button {
+  width: 95%;
+  margin: 40px auto;
+}
+/*# sourceMappingURL=forms.css.map */

@@ -40,34 +40,39 @@
 
     <main>
         <div class="blog-wrapper">
-            
+
             <aside class="side-post">
                 <div class="wrapper">
-                
-                <div class="side-img">
-                    <img src="images/blog-side-image.jpg" alt="A plate of grilled salmon topped with diced vegetables and laid on a brown sauce.">
-                </div>
 
-                <div class="side-content">
-                    <h4>
-                        Featured Restaurants
-                    </h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores perferendis officia vero voluptatibus sit saepe?</p>
+                    <div class="side-img">
+                        <img src="images/blog-side-image.jpg"
+                            alt="A plate of grilled salmon topped with diced vegetables and laid on a brown sauce.">
+                    </div>
 
-                    <h4>
-                        Recent Posts
-                    </h4>
-                    <p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Lorem ipsum dolor sit.</li>
-                        </ul>
-                    </p>
-                </div>
+                    <div class="side-content">
+                        <h4>
+                            Featured Restaurants
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores perferendis officia vero
+                            voluptatibus sit saepe?</p>
+
+                        <h4>
+                            Recent Posts
+                        </h4>
+                        <p>
+                            <ul>
+                                <li>Lorem ipsum dolor sit.</li>
+                                <li>Lorem ipsum dolor sit.</li>
+                                <li>Lorem ipsum dolor sit.</li>
+                                <li>Lorem ipsum dolor sit.</li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
             </aside>
+            <div class="right-wrapper">
+
+            
             <section class='employment'>
 
                 <div class='employment-img'>
@@ -113,65 +118,69 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quos voluptas ratione facere
                         exercitationem delectus tempora dignissimos cum blanditiis dolorum.</p>
                 </div>
-                
+
             </section>
-            </div>
+        
 
-            <section class="comments">
+        <section class="comments">
 
-                <h3>
-                    Comments
-                </h3>
+            <h3>
+                Comments:
+            </h3>
 
-                <div class="comments-content">
+            <div class="comments-content">
 
-                    <div class="comment-one">
-                        <div class="comment-one-img">
-                            <img src="images/comment-1.jpg" alt="Portrait image of a female commenter named Ali">
-                        </div>
-
-                        <div class="comment-one-content">
-                            <p class = "comment-date">
-                                Tuesday October 9th, 2019 by Ali
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, dignissimos totam asperiores recusandae quis tempora consequatur qui quidem amet voluptates enim! Possimus, facilis quaerat. Voluptatum beatae soluta at accusantium similique.
-
-                            </p>
-                        </div>
+                <div class="comment-one">
+                    <div class="comment-one-img">
+                        <img src="images/comment-1.jpg" alt="Portrait image of a female commenter named Ali">
                     </div>
 
+                    <div class="comment-one-content">
+                        <p class="comment-date">
+                            Tuesday October 9th, 2019 by Ali
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, dignissimos totam
+                            asperiores recusandae quis tempora consequatur qui quidem amet voluptates enim! Possimus,
+                            facilis quaerat. Voluptatum beatae soluta at accusantium similique.
 
-                    <div class="comment-two">
-                        <div class="comment-two-img">
-                            <img src="images/comment-2.jpg" alt="Portrait image of a female commenter named Lisa">
-                        </div>
-
-                        <div class="comment-two-content">
-                            <p class = "comment-date">
-                                Wednesday October 10th, 2019 by Lisa
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus earum unde omnis qui perferendis numquam alias odio repellat vero consectetur!
-                            </p>
-                        </div>
-
-
+                        </p>
                     </div>
                 </div>
 
-            </section>
 
-            <!-- <div class='contact-form'>
+                <div class="comment-two">
+                    <div class="comment-two-img">
+                        <img src="images/comment-2.jpg" alt="Portrait image of a female commenter named Lisa">
+                    </div>
+
+                    <div class="comment-two-content">
+                        <p class="comment-date">
+                            Wednesday October 10th, 2019 by Lisa
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus earum unde omnis
+                            qui perferendis numquam alias odio repellat vero consectetur!
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <div class='blog-form site-form'>
                 <form action="">
                     <fieldset>
                         <div class="fieldset-wrapper">
 
-                            <label for="full-name"></label>
-                            <input type="text" id="full-name" placeholder="Name" name="name-input">
+                            <label for="full-name" class='visually-hidden'>Name</label>
+                            <input type="text" id="full-name" placeholder="Name" name="name-input" required="true">
 
-                            <label for="email-address"></label>
-                            <input type="email" id="email-address" placeholder="Email address" name="email-input">
+                            <label for="email-address" class='visually-hidden'>Email</label>
+                            <input type="email" id="email-address" placeholder="Email address" name="email-input"
+                                required="true">
 
                             <textarea name="message-input" id="message" cols="60" rows="8"
                                 placeholder="Message"></textarea>
@@ -181,14 +190,16 @@
                             </button>
 
                         </div>
-                    </fieldset> -->
+                    </fieldset>
 
                 </form>
 
             </div>
+        </section>
+        </div> <!--Right Wrapper ends-->
+        </div> <!--Blog Wrapper ends-->
 
 
-        
     </main>
 
     <footer>

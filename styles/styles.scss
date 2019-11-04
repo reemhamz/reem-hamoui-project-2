@@ -1,6 +1,7 @@
 @import "partials/setup";
 @import "partials/font-styles";
 @import "partials/colors.scss";
+@import "partials/forms";
 
 html {
   font-size: 62.5%;
@@ -19,6 +20,8 @@ img {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
+  // display: flex;
+  // flex-direction: row;
   // border: 1px solid pink;
 }
 
@@ -125,28 +128,36 @@ header ul {
   flex-wrap: wrap;
 }
 
-// Burger section
-.burger {
-  display: flex;
+.wider-wrapper {
+  max-width: 1560px;
   width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 
-  .wrapper {
-    display: flex;
-    flex-direction: row;
-    .burger-content {
-      width: 60%;
-      padding-left: 80px;
-    }
-    .burger-img {
-      position: relative;
-      top: -80px;
-      left: -80px;
+// Burger section
+.burger-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
 
-      img {
-        box-shadow: 15px 15px 0 $yellow;
-        display: block;
-      }
-    }
+.burger-content {
+  width: 40%;
+  margin-right: 90px;
+}
+.burger-img {
+  position: relative;
+  top: -80px;
+  left: -100px;
+
+  img {
+    box-shadow: 15px 15px 0 $yellow;
+    display: block;
   }
 }
 
@@ -154,21 +165,17 @@ header ul {
 .new-food {
   padding-top: 40px;
   padding-bottom: 20px;
-  display: flex;
   width: 100%;
+  // flex-direction: row-reverse;
 
-  .wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-  }
   .new-food-content {
-    width: 60%;
-    padding-right: 80px;
+    width: 40%;
+    padding-left: 90px;
+    // margin-right: 250px;
     text-align: right;
   }
   .new-food-img {
     position: relative;
-    right: -61px;
     bottom: -30px;
 
     img {
@@ -211,31 +218,24 @@ header ul {
 .nature {
   background-color: $pine;
   margin: 0 auto;
-  padding: 30px;
+  padding: 50px 0;
   color: $white;
+  margin-top: 35px;
   .wrapper {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px 0;
+    justify-content: space-between;
     .nature-img {
-      display: inline-block;
-      margin-left: 10px;
-      margin-right: 100px;
-
       img {
         display: block;
-        max-width: 100%;
         box-shadow: -10px 10px 0 $yellow;
       }
     }
     .nature-content {
       width: 70%;
-    }
-
-    h3 {
-      color: $yellow;
-      line-height: 0;
+      h3 {
+        color: $yellow;
+        line-height: 0;
+      }
     }
   }
 }
@@ -244,32 +244,33 @@ header ul {
 
 .gallery {
   background-color: $almostBlack;
-  padding: 40px;
-  .wrapper {
-    display: flex;
-    flex-basis: 0;
-    flex-shrink: 1;
-    justify-content: center;
-    flex-wrap: nowrap;
+  padding: 40px 0;
 
     ul {
       display: flex;
-
       padding: 0;
+      justify-content: space-between;
+      list-style: none;
       li {
-        width: calc((100% / 3) - 15);
-        margin: 0 15px;
+        // width: calc((100% / 3) - 15);
+        // margin: 0 15px;
+        img{
+          display: block;
+        }
       }
     }
   }
-}
+
 
 // Footer styling
 footer {
   color: $white;
   background-color: $black;
-  padding: 1px;
+  padding: 10px 0;
   text-align: center;
+  p{
+    margin:0;
+  }
 }
 
 // Contact Page Styling
@@ -320,66 +321,6 @@ footer {
       }
     }
   }
-  .contact-form {
-    width: 90%;
-  }
-}
-
-.contact-form {
-  background-color: $almostBlack;
-  box-shadow: 15px 15px 0 $yellow;
-  position: relative;
-  bottom: 200px;
-  margin: 0 auto;
-
-  fieldset {
-    text-align: center;
-    padding: 30px;
-    border-style: none;
-    display: flex;
-
-    .fieldset-wrapper {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-
-      input {
-        display: flex;
-        width: calc(90% / 2);
-      }
-    }
-
-    input,
-    textarea {
-      background-color: $almostBlack;
-      color: $white;
-
-      &::placeholder {
-        color: $white;
-        margin: 50px;
-      }
-    }
-  }
-}
-
-#contact input {
-  margin: 0 auto;
-  margin-bottom: 30px;
-  border-style: none;
-  border-bottom: 1px solid $yellow;
-}
-
-#contact textarea {
-  width: 95%;
-  margin: 0 auto;
-  border: 1px solid $yellow;
-}
-
-#contact button {
-  width: 95%;
-  margin: 40px auto;
 }
 
 // Blog Styling
@@ -405,15 +346,16 @@ footer {
   justify-content: space-between;
   margin: 0 auto;
   .employment {
-    border: 2px solid $yellow;
+    box-shadow: inset 2px -2px 0px 0px $yellow;
     border-right: none;
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 60%;
+
     .employment-content {
-      padding-bottom: 50px;
-      margin: 0 60px;
+      padding: 0 60px;
+      padding-bottom: 60px;
+
       h2 {
         color: $yellow;
       }
@@ -427,6 +369,8 @@ footer {
     .employment-img {
       position: relative;
       top: -150px;
+      right: -15px;
+      width: 98%;
 
       img {
         box-shadow: -15px 15px 0 $yellow;
@@ -448,11 +392,11 @@ footer {
     padding-left: 30px;
     padding-right: 30px;
     padding: 370px 30px 30px 30px;
-    
+
     h4 {
       color: $yellow;
       margin: 0;
-      line-height: 20px; 
+      line-height: 20px;
     }
     p {
       color: $white;
@@ -460,7 +404,7 @@ footer {
     ul {
       color: $white;
       list-style-type: disc;
-      li{
+      li {
         line-height: 1.5;
       }
     }
@@ -474,16 +418,18 @@ footer {
   width: 90%;
 }
 
+.right-wrapper {
+  width: 60%;
+}
+.comments {
+  margin: 0 60px;
 
-.comments{
-  display: flex;
-  flex-direction: column;
-  
-  width: 55%;
-  h3, p{
+  // width: 80%;
+  h3,
+  p {
     color: $white;
   }
-    .comment-date{
+  .comment-date {
     color: $yellow;
     font-weight: 600;
   }
