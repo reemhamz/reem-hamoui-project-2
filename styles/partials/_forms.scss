@@ -1,8 +1,9 @@
+@import "mixins";
+
 .site-form {
   margin: 0 auto;
   width: 100%;
   padding-top: 60px;
-
 
   fieldset {
     text-align: center;
@@ -65,6 +66,26 @@
       background-color: $almostBlack;
       &:focus {
         background-color: lighten($almostBlack, 10);
+      }
+    }
+  }
+}
+
+@include mq-tablet {
+  .contact-form {
+    box-shadow: none;
+    border: 10px solid $yellow;
+    padding: 0;
+    bottom: 50px;
+  }
+
+  
+  .site-form {
+    fieldset {
+      .fieldset-wrapper {
+        input {
+          width: 100%;
+        }
       }
     }
   }

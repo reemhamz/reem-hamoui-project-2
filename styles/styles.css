@@ -408,6 +408,19 @@ ul li {
   background-color: #343d1f;
 }
 
+@media (max-width: 980px) {
+  .contact-form {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 10px solid #FFD300;
+    padding: 0;
+    bottom: 50px;
+  }
+  .site-form fieldset .fieldset-wrapper input {
+    width: 100%;
+  }
+}
+
 .blog-form {
   width: 100%;
   background-color: #2B331B;
@@ -606,6 +619,7 @@ input[type="checkbox"] {
 @media (max-width: 980px) {
   .info {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
   .info .wrapper {
     -webkit-box-orient: vertical;
@@ -615,6 +629,10 @@ input[type="checkbox"] {
   }
   .info .wrapper .info-content {
     width: 100%;
+    text-align: center;
+  }
+  .info .wrapper .info-content h2 {
+    padding-bottom: 20px;
   }
 }
 
@@ -624,6 +642,10 @@ input[type="checkbox"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 30px;
+  }
+  .info-content .icon-contain {
+    margin: 0 auto;
   }
 }
 
@@ -982,8 +1004,20 @@ footer p {
   padding-top: 5px;
 }
 
-.contact-info .contact-info-bottom p {
-  line-height: 0.5;
+@media (max-width: 980px) {
+  .contact-main .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contact-main .wrapper .contact-info {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 #blog header {
