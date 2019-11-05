@@ -18,17 +18,25 @@
 
 <body id='blog'>
 
+    <a href="#maincontent" class="skip-link">Skip to main content.</a>
+
     <header class='header'>
         <div class='wrapper'>
 
 
             <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
+                <label for="toggle">
+                    <i class="fas fa-hamburger fa-3x burger-menu"></i>
+                </label>
+                <input type="checkbox" id="toggle" name="toggle">
+                <div id="sidebar" class="menu-toggle" aria-hidden="true">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
 
             <h1>
@@ -59,14 +67,14 @@
                         <h4>
                             Recent Posts
                         </h4>
-                        <p>
+                        
                             <ul>
                                 <li>Lorem ipsum dolor sit.</li>
                                 <li>Lorem ipsum dolor sit.</li>
                                 <li>Lorem ipsum dolor sit.</li>
                                 <li>Lorem ipsum dolor sit.</li>
                             </ul>
-                        </p>
+                        
                     </div>
                 </div>
             </aside>
@@ -183,10 +191,10 @@
                                 required="true">
 
                             <textarea name="message-input" id="message" cols="60" rows="8"
-                                placeholder="Message"></textarea>
+                                placeholder="Comment"></textarea>
 
                             <button type="submit" class="button yellow-button">
-                                Submit
+                                Post Comment
                             </button>
 
                         </div>

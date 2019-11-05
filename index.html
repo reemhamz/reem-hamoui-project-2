@@ -13,17 +13,26 @@
 </head>
 
 <body id='index'>
+    
+    <a href="#maincontent" class="skip-link">Skip to main content.</a>
+
+
     <header class='header'>
         <div class='wrapper'>
 
-
             <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
+                <label for="toggle">
+                    <i class="fas fa-hamburger fa-3x burger-menu"></i>
+                </label>
+                <input type="checkbox" id="toggle" name="toggle">
+                <div id="sidebar" class="menu-toggle" aria-hidden="true">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
 
             <h1>
@@ -44,7 +53,7 @@
             <div class="wrapper">
 
 
-                <div class="location content">
+                <div class="location info-content">
                     <div class="icon-contain">
                         <i class="fas fa-map-marker-alt fa-4x"></i>
                     </div>
@@ -63,7 +72,7 @@
 
                 </div>
 
-                <div class="community content">
+                <div class="community info-content">
                     <div class="icon-contain">
                         <i class="fas fa-users fa-4x"></i>
                     </div>
@@ -81,7 +90,7 @@
 
                 </div>
 
-                <div class="blog content">
+                <div class="blog info-content">
                     <div class="icon-contain">
                         <i class="fas fa-file fa-4x"></i>
                     </div>
@@ -100,7 +109,7 @@
 
                 </div>
 
-                <div class="touch content">
+                <div class="touch info-content">
 
                     <div class="icon-contain">
                         <i class="fas fa-phone fa-4x"></i>
@@ -130,26 +139,31 @@
                 <div class="wider-wrapper">
                     <div class="burger-box">
 
-                    
-                    <div class="burger-img food-img">
-                        <img src="images/left-image.jpg"
-                            alt="A plate with a fresh burger in a toasted and seasoned fries ">
-                    </div>
-                    <div class="burger-content">
 
-                        <h3>
-                            Best Burgers
-                        </h3>
+                        <div class="burger-img food-img">
+                            <img src="images/left-image.jpg"
+                                alt="A plate with a fresh burger in a toasted and seasoned fries ">
+                        </div>
 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At, asperiores a eius sapiente
-                            temporibus excepturi nulla est nam ullam quibusdam quae natus. Libero, eius accusantium.
-                        </p>
+                        <!-- <div class="wrapper"> -->
 
-                        <button type='button' class='button yellow-button'>
-                            read more
-                        </button>
-                    </div>
+
+                        <div class="burger-content">
+
+                            <h3>
+                                Best Burgers
+                            </h3>
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, asperiores a eius sapiente
+                                temporibus excepturi nulla est nam ullam quibusdam quae natus. Libero, eius accusantium.
+                            </p>
+
+                            <button type='button' class='button yellow-button'>
+                                read more
+                            </button>
+                            <!-- </div> -->
+                        </div>
                     </div>
                 </div>
                 <!--Burger article ends-->
@@ -158,29 +172,35 @@
             <article class="new-food">
                 <div class="wider-wrapper">
 
+                    <div class="new-food-box">
 
-                    <div class="new-food-img food-img">
-                        <img src="images/right-image.jpg"
-                            alt="A creative plate with food covered in green sauce topped with nuts, tomatoes, and flower petals">
+
+                        <div class="new-food-img food-img">
+                            <img src="images/right-image.jpg"
+                                alt="A creative plate with food covered in green sauce topped with nuts, tomatoes, and flower petals">
+                        </div>
+                        <!-- <div class="wrapper"> -->
+
+
+
+                        <div class="new-food-content">
+                            <!--New Food article starts-->
+                            <h3>
+                                Try Something New
+                            </h3>
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, asperiores a eius sapiente
+                                temporibus excepturi nulla est nam ullam quibusdam quae natus. Libero, eius accusantium.
+                            </p>
+
+                            <button type='button' class='button yellow-button'>
+                                read more
+                            </button>
+                        </div>
+
+                        <!-- </div> -->
                     </div>
-                    <!-- <div class="wrapper"> -->
-
-                    <div class="new-food-content">
-                        <!--New Food article starts-->
-                        <h3>
-                            Try Something New
-                        </h3>
-
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At, asperiores a eius sapiente
-                            temporibus excepturi nulla est nam ullam quibusdam quae natus. Libero, eius accusantium.
-                        </p>
-
-                        <button type='button' class='button yellow-button'>
-                            read more
-                        </button>
-                    </div>
-                    <!-- </div> -->
                     <!--New Food article ends-->
                 </div>
             </article>
@@ -210,38 +230,38 @@
         </section>
 
         <div class="mid-banner">
-            <img src="images/banner.jpg" alt="Restaurant interior with wooden floors, tables, and black counters.">
+            <!-- Background image inserted in CSS -->
         </div>
 
 
         <section class='nature'>
-            
-                <div class='wrapper'>
-                    <div class="nature-img">
-                        <img src="images/square-image.jpg"
-                            alt="People dining in a restaurant with class ceiling and plants in hanging pots.">
-                    </div>
-                    
-                    <article class="nature-content">
-                        <h3>
-                            Bringing Nature in Spaces
-                        </h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis consequuntur nulla
-                            doloremque
-                            modi similique error tenetur dolorum omnis voluptatibus! Architecto quaerat, ipsam mollitia
-                            odio
-                            commodi atque, ex laudantium assumenda inventore corrupti doloribus earum illo asperiores
-                            corporis suscipit amet. Quasi inventore facere sit quo, consequatur odio ad tempore et earum
-                            omnis.
-                        </p>
-                        <button type='button' class='button black-button'>
-                            Find out More
-                        </button>
-                    </article>
-                    
+
+            <div class='wrapper'>
+                <div class="nature-img">
+                    <img src="images/square-image.jpg"
+                        alt="People dining in a restaurant with class ceiling and plants in hanging pots.">
                 </div>
-            
+
+                <article class="nature-content">
+                    <h3>
+                        Bringing Nature in Spaces
+                    </h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis consequuntur nulla
+                        doloremque
+                        modi similique error tenetur dolorum omnis voluptatibus! Architecto quaerat, ipsam mollitia
+                        odio
+                        commodi atque, ex laudantium assumenda inventore corrupti doloribus earum illo asperiores
+                        corporis suscipit amet. Quasi inventore facere sit quo, consequatur odio ad tempore et earum
+                        omnis.
+                    </p>
+                    <button type='button' class='button black-button'>
+                        Find out More
+                    </button>
+                </article>
+
+            </div>
+
         </section>
 
         <section class="gallery">

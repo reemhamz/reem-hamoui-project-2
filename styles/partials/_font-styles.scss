@@ -1,5 +1,8 @@
 // @import "partials/colors.scss";
 
+@import "mixins";
+@import "colors";
+
 * {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
@@ -16,21 +19,12 @@ button {
 h1 {
   font-size: 6.9rem;
   font-weight: 600;
-
-  @include mq-phone{
-    font-size: 2rem;
-    
-  }
 }
-
 
 h2 {
   font-size: 4.5rem;
   margin: 0 auto;
   //   line-height: 99.9px;
-  @include mq-phone{
-    font-color: blue;
-  }
 }
 
 h3 {
@@ -45,8 +39,6 @@ h4 {
   letter-spacing: 0.8px;
 }
 
-
-
 button {
   font-size: 2.24rem;
   text-align: center;
@@ -54,24 +46,16 @@ button {
   padding-top: 10px;
 }
 
-nav {
-  font-size: 2rem;
-  line-height: 29px;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-p, 
+p,
 input,
 label,
 textarea,
-a, 
+a,
 li {
   font-family: "Barlow", sans-serif;
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
-  
 }
 
 nav {
@@ -85,7 +69,6 @@ nav {
   }
 }
 
-
 .black-button {
   background-color: #0f0f0f;
   color: #ffffff;
@@ -93,7 +76,6 @@ nav {
   transition: border 0.2s;
   &:hover {
     border: dashed 2px #ffd300;
-    
   }
 }
 
@@ -103,6 +85,32 @@ nav {
   transition: border 0.2s;
   &:hover {
     border: dashed 2px #0f0f0f;
-    
+  }
+}
+
+@include mq-header-tablet {
+  h1 {
+    font-size: 4.5rem;
+    margin: 0 auto;
+    display: block;
+    text-shadow: 1px 1px $almostBlack;
+  }
+}
+
+@include mq-tablet {
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4{
+
+  }
+}
+
+@include mq-small-phone{
+  h1{
+    font-size: 4rem;
   }
 }

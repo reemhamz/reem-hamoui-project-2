@@ -1,19 +1,17 @@
 nav {
-  background: crimson;
+  
+  font-size: 2rem;
+  line-height: 29px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
 
   ul {
     padding: 0;
 
     li {
       list-style: none;
-      display: inline-block;
-
-      a {
-        font-size: 60px;
-        &:hover {
-          color: cyan;
-        }
-      }
+      // display: inline-block;
     }
   }
-}
+

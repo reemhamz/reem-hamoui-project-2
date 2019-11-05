@@ -1,5 +1,6 @@
 @import "partials/setup";
 @import "partials/font-styles";
+@import "partials/nav";
 @import "partials/colors.scss";
 @import "partials/forms";
 @import "partials/mixins";
@@ -12,6 +13,19 @@ body {
   margin: 0;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -21,6 +35,7 @@ img {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
+  // border: 2px solid salmon;
 }
 
 // Home Page styliing
@@ -33,47 +48,79 @@ header {
   height: 80vh;
   color: $white;
   position: relative;
-}
-
-header span {
-  background-color: $white;
-  color: $almostBlack;
-  display: block;
-  padding-top: 15px;
-  margin-bottom: 15px;
-}
-
-header h1 {
-  display: inline-block;
-}
-
-header ul {
-  padding-top: 70px;
-  display: inline-block;
-  display: flex;
-  li {
-    padding-right: 30px;
-    a {
-      text-decoration: none;
-      color: $white;
-      &:hover {
-        border-bottom: solid 3px $yellow;
-        transition: 0.3s ease-out;
+  ul {
+    padding-top: 70px;
+    display: inline-block;
+    display: flex;
+    li {
+      padding-right: 30px;
+      a {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+          border-bottom: solid 3px $yellow;
+          transition: 0.3s ease-out;
+        }
       }
     }
   }
 }
 
-.header-img {
-  position: absolute;
-  width: 50%;
-  right: 0;
-  top: 190px;
+header {
+  h1 {
+    display: inline-block;
+  }
+  span {
+    background-color: $white;
+    color: $almostBlack;
+    display: block;
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+  .header-img {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 190px;
 
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
 
-  img {
-    height: 100%;
+.burger-menu,
+input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+// Header Media Queries
+@include mq-header-tablet {
+  .header-img {
+    right: 0;
+  }
+}
+
+@include mq-big-phone {
+  .header-img {
+    visibility: hidden;
+  }
+
+  header ul {
+    visibility: hidden;
+  }
+  .burger-menu {
+    visibility: visible;
+    display: block;
+    padding-top: 20px;
+    position: absolute;
+  }
+  h1 {
+    text-align: center;
     width: 100%;
+    margin-top: 100px;
   }
 }
 
@@ -89,7 +136,7 @@ header ul {
     display: flex;
     flex-wrap: wrap;
   }
-  .content {
+  .info-content {
     display: flex;
     width: 50%;
   }
@@ -114,6 +161,25 @@ header ul {
   }
 }
 
+// Info Media Queries
+@include mq-tablet {
+  .info {
+    padding-top: 50px;
+    .wrapper {
+      flex-direction: column;
+      .info-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mq-small-phone{
+  .info-content{
+    flex-direction: column;
+  }
+}
+
 // Food styling
 .food {
   background-color: $almostBlack;
@@ -121,9 +187,11 @@ header ul {
   color: $white;
   margin: 0 auto;
   padding-top: 50px;
-  // padding-bottom: 300px;
   display: flex;
   flex-wrap: wrap;
+  @include mq-tablet {
+    padding-bottom: 50px;
+  }
 }
 
 .wider-wrapper {
@@ -134,6 +202,10 @@ header ul {
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   justify-content: space-between;
+  @include mq-tablet {
+    max-width: 1240px;
+    width: 90%;
+  }
 }
 
 // Burger section
@@ -145,13 +217,13 @@ header ul {
 }
 
 .burger-content {
-  width: 40%;
+  width: 50%;
   margin-right: 90px;
+  padding-left: 90px;
 }
 .burger-img {
   position: relative;
   top: -80px;
-  left: -100px;
 
   img {
     box-shadow: 15px 15px 0 $yellow;
@@ -159,28 +231,76 @@ header ul {
   }
 }
 
-// New Food section
-.new-food {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  width: 100%;
-  // flex-direction: row-reverse;
-
-  .new-food-content {
-    width: 40%;
-    padding-left: 90px;
-    text-align: right;
-  }
-  .new-food-img {
-    position: relative;
-    bottom: -30px;
-
-    img {
-      box-shadow: -15px 15px 0 $yellow;
-      display: block;
+// Burger Media Queries
+@include mq-tablet {
+  .burger-box {
+    flex-direction: column;
+    padding-bottom: 50px;
+    .burger-content {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .food-img {
+      position: static;
+      img {
+        box-shadow: none;
+        border: 10px solid $yellow;
+        margin: 0 auto;
+        width: 100%;
+      }
     }
   }
 }
+
+// New Food section
+
+.new-food-box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.new-food-content {
+  width: 50%;
+  padding-left: 65px;
+  margin-right: 160px;
+
+  text-align: right;
+}
+.new-food-img {
+  position: relative;
+  bottom: -30px;
+
+  img {
+    box-shadow: -15px 15px 0 $yellow;
+    display: block;
+  }
+}
+
+@include mq-tablet {
+  .new-food-box {
+    flex-direction: column;
+    justify-content: center;
+    .new-food-content {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .new-food-img {
+      position: static;
+      img {
+        box-shadow: none;
+        border: 10px solid $yellow;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+}
+//
 
 // Winning styling
 
@@ -194,6 +314,14 @@ header ul {
   }
   p {
     color: $white;
+  }
+}
+
+// Winning Media Query
+
+@include mq-tablet {
+  .winning {
+    padding: 50px 0;
   }
 }
 
@@ -217,7 +345,6 @@ header ul {
   margin: 0 auto;
   padding: 50px 0;
   color: $white;
-  margin-top: 35px;
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -231,7 +358,28 @@ header ul {
       width: 70%;
       h3 {
         color: $yellow;
-        line-height: 0;
+        // line-height: 0;
+      }
+    }
+  }
+}
+
+// Nature Media Queries
+@include mq-tablet {
+  .nature {
+    text-align: center;
+    margin: 0 auto;
+    .wrapper {
+      flex-direction: column;
+      .nature-content {
+        width: 100%;
+      }
+      .nature-img {
+        img {
+          margin: 0 auto;
+          box-shadow: none;
+          border: 10px solid $yellow;
+        }
       }
     }
   }
@@ -242,13 +390,42 @@ header ul {
 .gallery {
   background-color: $almostBlack;
   padding: 40px 0;
+
   ul {
     display: flex;
-    padding: 0;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
     list-style: none;
+    li {
+      margin-right: 35px;
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+    }
     img {
       display: block;
+    }
+  }
+}
+
+// Gallery media query
+@include mq-big-phone{
+  .gallery {
+    ul {
+      flex-wrap: wrap;
+      li{
+        margin-right: 0;
+        width: 45%;
+        &:nth-child(3){
+          padding-top: 35px;
+          width: 100%;
+          img{
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
@@ -288,27 +465,27 @@ footer {
   .wrapper {
     display: flex;
   }
+}
 
-  .contact-info {
+.contact-info {
+  color: $white;
+  width: 40%;
+  margin-right: 60px;
+  text-align: left;
+  a {
+    text-decoration: none;
     color: $white;
-    width: 35%;
-    margin-right: 60px;
-    text-align: left;
-    a {
-      text-decoration: none;
-      color: $white;
+  }
+  .contact-info-top {
+    i {
+      color: $yellow;
+      padding: 20px 10px 0 0;
     }
-    .contact-info-top {
-      i {
-        color: $yellow;
-        padding: 20px 10px 0 0;
-      }
-    }
-    .contact-info-bottom {
-      padding-top: 5px;
-      p {
-        line-height: 0.5;
-      }
+  }
+  .contact-info-bottom {
+    padding-top: 5px;
+    p {
+      line-height: 0.5;
     }
   }
 }
@@ -329,6 +506,7 @@ footer {
 
 #blog main {
   background-color: $pine;
+  padding-bottom: 60px;
 }
 
 .blog-wrapper {
@@ -394,6 +572,7 @@ footer {
     ul {
       color: $white;
       list-style-type: disc;
+      padding-left: 20px;
       li {
         line-height: 1.5;
       }
