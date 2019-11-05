@@ -1,5 +1,11 @@
 @mixin mq-tablet{
-    @media (max-width: 800px){
+    @media (max-width: 960px){
+        @content;
+    }
+}
+
+@mixin mq-phone{
+    @media (max-width: 550px){
         @content;
     }
 }

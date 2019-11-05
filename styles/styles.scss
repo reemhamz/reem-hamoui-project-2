@@ -2,6 +2,7 @@
 @import "partials/font-styles";
 @import "partials/colors.scss";
 @import "partials/forms";
+@import "partials/mixins";
 
 html {
   font-size: 62.5%;
@@ -20,9 +21,6 @@ img {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
-  // display: flex;
-  // flex-direction: row;
-  // border: 1px solid pink;
 }
 
 // Home Page styliing
@@ -67,11 +65,11 @@ header ul {
 }
 
 .header-img {
-  display: inline-block;
   position: absolute;
   width: 50%;
   right: 0;
   top: 190px;
+
 
   img {
     height: 100%;
@@ -171,7 +169,6 @@ header ul {
   .new-food-content {
     width: 40%;
     padding-left: 90px;
-    // margin-right: 250px;
     text-align: right;
   }
   .new-food-img {
@@ -245,22 +242,16 @@ header ul {
 .gallery {
   background-color: $almostBlack;
   padding: 40px 0;
-
-    ul {
-      display: flex;
-      padding: 0;
-      justify-content: space-between;
-      list-style: none;
-      li {
-        // width: calc((100% / 3) - 15);
-        // margin: 0 15px;
-        img{
-          display: block;
-        }
-      }
+  ul {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    list-style: none;
+    img {
+      display: block;
     }
   }
-
+}
 
 // Footer styling
 footer {
@@ -268,8 +259,8 @@ footer {
   background-color: $black;
   padding: 10px 0;
   text-align: center;
-  p{
-    margin:0;
+  p {
+    margin: 0;
   }
 }
 
@@ -296,7 +287,6 @@ footer {
   display: flex;
   .wrapper {
     display: flex;
-    // justify-content: space-between;
   }
 
   .contact-info {
@@ -423,11 +413,13 @@ footer {
 }
 .comments {
   margin: 0 60px;
-
-  // width: 80%;
   h3,
   p {
     color: $white;
+  }
+
+  img {
+    display: block;
   }
   .comment-date {
     color: $yellow;

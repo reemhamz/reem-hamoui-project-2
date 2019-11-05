@@ -466,7 +466,6 @@ header ul li a:hover {
 }
 
 .header-img {
-  display: inline-block;
   position: absolute;
   width: 50%;
   right: 0;
@@ -686,7 +685,7 @@ header ul li a:hover {
   list-style: none;
 }
 
-.gallery ul li img {
+.gallery ul img {
   display: block;
 }
 
@@ -877,6 +876,10 @@ footer p {
 .comments h3,
 .comments p {
   color: #FFFFFF;
+}
+
+.comments img {
+  display: block;
 }
 
 .comments .comment-date {
