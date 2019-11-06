@@ -90,7 +90,7 @@ header {
   }
 }
 
-.burger-menu,
+.mobile-nav,
 input[type="checkbox"] {
   visibility: hidden;
   display: none;
@@ -108,14 +108,52 @@ input[type="checkbox"] {
     visibility: hidden;
   }
 
-  header ul {
-    visibility: hidden;
-  }
-  .burger-menu {
-    visibility: visible;
-    display: block;
-    padding-top: 20px;
-    position: absolute;
+  header {
+    .desktop-nav {
+      visibility: hidden;
+      display: none;
+    }
+    .mobile-nav {
+      visibility: visible;
+      display: block;
+      padding-top: 20px;
+      position: relative;
+      left: -20px;
+
+      label {
+        padding: 20px 0 0 20px;
+      }
+
+      .menu-toggle {
+        position: absolute;
+        left: -500px;
+        transition: all 1s;
+      }
+      ul {
+        background-color: $yellow;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        height: 30vh;
+        padding-top: 20px;
+        padding-left: 20px;
+        color: $almostBlack;
+        li {
+          padding-top: 20px;
+          a {
+            color: $almostBlack;
+
+            &:hover {
+              border-bottom: 2px solid $almostBlack;
+            }
+          }
+        }
+      }
+      input:checked + .menu-toggle {
+        left: 0;
+      }
+    }
   }
   h1 {
     text-align: center;
@@ -171,7 +209,7 @@ input[type="checkbox"] {
       .info-content {
         width: 100%;
         text-align: center;
-        h2{
+        h2 {
           padding-bottom: 20px;
         }
       }
@@ -179,11 +217,11 @@ input[type="checkbox"] {
   }
 }
 
-@include mq-small-phone{
-  .info-content{
+@include mq-small-phone {
+  .info-content {
     flex-direction: column;
     padding-top: 30px;
-    .icon-contain{
+    .icon-contain {
       margin: 0 auto;
     }
   }
@@ -420,17 +458,17 @@ input[type="checkbox"] {
 }
 
 // Gallery media query
-@include mq-big-phone{
+@include mq-big-phone {
   .gallery {
     ul {
       flex-wrap: wrap;
-      li{
+      li {
         margin-right: 0;
         width: 45%;
-        &:nth-child(3){
+        &:nth-child(3) {
           padding-top: 35px;
           width: 100%;
-          img{
+          img {
             width: 100%;
           }
         }
@@ -500,12 +538,12 @@ footer {
 
 // Contact Media Query
 
-@include mq-tablet{
-  .contact-main{
-    .wrapper{
+@include mq-tablet {
+  .contact-main {
+    .wrapper {
       flex-direction: column-reverse;
       justify-content: space-evenly;
-      .contact-info{
+      .contact-info {
         width: 100%;
         text-align: center;
       }
@@ -536,6 +574,7 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+
   .employment {
     box-shadow: inset 2px -2px 0px 0px $yellow;
     border-right: none;
@@ -582,7 +621,7 @@ footer {
     left: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    padding: 370px 30px 30px 30px;
+    padding: 450px 30px 30px 30px;
 
     h4 {
       color: $yellow;
@@ -626,5 +665,75 @@ footer {
   .comment-date {
     color: $yellow;
     font-weight: 600;
+  }
+}
+
+@include mq-tablet {
+  .blog-wrapper {
+    flex-direction: column;
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    .side-post {
+      width: 100%;
+      .side-content {
+        left: auto;
+        margin-top: 40px;
+        width: 100%;
+      }
+      .wrapper {
+        .side-img {
+          left: auto;
+          img {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+          }
+        }
+      }
+    }
+    .right-wrapper {
+      width: 100%;
+      .employment {
+        box-shadow: none;
+        .employment-img {
+          box-shadow: none;
+          top: 100px;
+          margin-top: 100px;
+          margin-bottom: 200px;
+          width: 100%;
+          right: auto;
+          img {
+            box-shadow: none;
+            border: 10px solid $yellow;
+          }
+        }
+        .employment-content {
+          width: 100%;
+          padding: 0;
+          h2,
+          .date {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .comments {
+      width: 100%;
+      margin: 0;
+      .comments-content {
+        .comment-two{
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+@include mq-big-phone {
+  .side-post {
+    .side-content {
+      padding: 350px 30px 200px 30px;
+    }
   }
 }

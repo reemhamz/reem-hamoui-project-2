@@ -194,6 +194,12 @@ ul li {
   list-style: none;
 }
 
+@media (max-width: 630px) {
+  ul {
+    position: absolute;
+  }
+}
+
 body {
   background: chocolate;
   font-family: "Courier New", Courier, monospace;
