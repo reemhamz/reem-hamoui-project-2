@@ -12,12 +12,6 @@ nav {
 
     li {
       list-style: none;
-      // display: inline-block;
     }
   }
 
-@include mq-big-phone{
-  ul{
-    position: absolute;
-  }
-}

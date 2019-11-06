@@ -305,12 +305,6 @@ ul li {
   list-style: none;
 }
 
-@media (max-width: 630px) {
-  ul {
-    position: absolute;
-  }
-}
-
 .site-form {
   margin: 0 auto;
   width: 100%;
