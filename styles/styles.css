@@ -1043,6 +1043,12 @@ footer p {
 .contact-info .contact-info-top i {
   color: #FFD300;
   padding: 20px 10px 0 0;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.contact-info .contact-info-top i:hover {
+  color: green;
 }
 
 .contact-info .contact-info-bottom {
@@ -1218,6 +1224,9 @@ footer p {
     left: auto;
     margin-top: 40px;
     width: 100%;
+  }
+  .blog-wrapper .side-post .side-content h4 {
+    line-height: 50px;
   }
   .blog-wrapper .side-post .wrapper .side-img {
     left: auto;
